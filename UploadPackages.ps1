@@ -1,5 +1,22 @@
 $ErrorActionPreference = 'Stop'
 
+function DeleteBinDir {
+    rm -fo -r bin
+}
+
+function CopyAllPackagesToBinDir() {
+    ls . | ? PSIsContainer | % {
+        robocopy $_.FullName bin /e
+        if($LASTEXITCODE -gt 4) {
+            throw "Failed to copy packages to bin folder."
+        }
+    }
+}
+
+function ChangeCurrentDirectoryToBinDir() {
+    cd bin
+}
+
 function CreateAllPackages() {
     ls -r -fi *.nuspec | % {
         cpack $_.FullName
@@ -34,6 +51,9 @@ function RunWithinDirectory([string]$Path, [scriptblock]$Command) {
 }
 
 RunWithinDirectory $PSScriptRoot {
+    DeleteBinDir
+    CopyAllPackagesToBinDir
+    ChangeCurrentDirectoryToBinDir
     CreateAllPackages
     AskForApprovalOfAllPackages
     UploadAllPackages
