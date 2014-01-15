@@ -7,7 +7,12 @@ try {
   $tempDir = Join-Path $env:TEMP "chocolatey\$($packageName)"
   if(Test-Path $tempDir) { rm -fo -r $tempDir }
   Install-ChocolateyZipPackage "$packageName" "$url" "$tempDir" "$url64"
-  ls $tempDir | % { robocopy /e $_.FullName $toolsFolder }
+  ls $tempDir -fi vifm-* | % { robocopy /e $_.FullName $toolsFolder }
+
+  #Suppress creation of batch redirects for some rarely used executables
+  'vifmrc-converter.exe', 'win_helper.exe' | % {
+    Set-Content -Path (Join-Path $toolsFolder "${_}.ignore") -Encoding byte -Value @()
+  }
 
   Write-ChocolateySuccess "$packageName"
 } catch {
