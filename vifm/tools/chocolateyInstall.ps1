@@ -7,7 +7,16 @@ try {
   $tempDir = Join-Path $env:TEMP "chocolatey\$($packageName)"
   if(Test-Path $tempDir) { rm -fo -r $tempDir }
   Install-ChocolateyZipPackage "$packageName" "$url" "$tempDir" "$url64"
-  ls $tempDir -fi vifm-* | % { robocopy /e $_.FullName $toolsFolder }
+  $subdir = ls $tempDir -fi vifm-* 
+  if($subdir.GetType().FullName -ne 'System.IO.DirectoryInfo') {
+    throw "Expected to find one subfolder."
+  }
+  $subdir | % { 
+    robocopy /e $_.FullName $toolsFolder 
+    if($LASTEXITCODE -gt 4) {
+        throw "Failed to copy files."
+    }
+  }
 
   #Suppress creation of batch redirects for some rarely used executables
   'vifmrc-converter.exe', 'win_helper.exe' | % {
