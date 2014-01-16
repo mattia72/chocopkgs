@@ -12,7 +12,7 @@ try {
     throw "Expected to find one subfolder."
   }
   $subdir | % { 
-    robocopy /e $_.FullName $toolsFolder 
+    robocopy /e /nfl /ndl /njh /njs /np $_.FullName $toolsFolder
     if($LASTEXITCODE -gt 4) {
         throw "Failed to copy files."
     }
