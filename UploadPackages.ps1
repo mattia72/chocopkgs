@@ -1,7 +1,9 @@
 $ErrorActionPreference = 'Stop'
 
 function DeleteBinDir {
-    rm -fo -r bin
+    if(Test-Path bin) {
+        rm -fo -r bin
+    }
 }
 
 function CopyAllPackagesToBinDir() {
