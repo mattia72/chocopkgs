@@ -8,7 +8,7 @@ function DeleteBinDir {
 
 function CopyAllPackagesToBinDir() {
     ls . | ? PSIsContainer | % {
-        robocopy $_.FullName bin /e
+        robocopy $_.FullName "bin\$($_)" /e
         if($LASTEXITCODE -gt 4) {
             throw "Failed to copy packages to bin folder."
         }
