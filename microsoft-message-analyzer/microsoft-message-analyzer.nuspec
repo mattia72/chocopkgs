@@ -15,7 +15,7 @@ Please also visit Message Analyzer Team Blog (http://blogs.technet.com/MessageAn
     <projectUrl>http://technet.microsoft.com/en-us/library/jj649776.aspx</projectUrl>
     <tags>microsoft message analyzer wireshark network monitor packet trace sniff etw</tags>
     <copyright>© 2013 Microsoft Corporation. All rights reserved.</copyright>
-    <licenseUrl>https://mega.co.nz/#!9AhwgZjA!lT-sekBwNM1cp-UKzpbwcB_UqRGcJ-7vTtzmS_AeNLY</licenseUrl>
+    <licenseUrl>https://bitbucket.org/bartj/chocolateypackages/src/HEAD/microsoft-message-analyzer/Message%20Analyzer%20Use%20Terms.rtf</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://i.technet.microsoft.com/dynimg/IC677823.png</iconUrl>
     <releaseNotes></releaseNotes>
