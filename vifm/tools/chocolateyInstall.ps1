@@ -1,6 +1,6 @@
 ﻿$packageName = 'vifm'
-$url = 'http://sourceforge.net/projects/vifm/files/vifm-w32/vifm-w32-se-0.7.6-binary.zip/download'
-$url64 = 'http://sourceforge.net/projects/vifm/files/vifm-w64/vifm-w64-se-0.7.6-binary.zip/download'
+$url = 'http://sourceforge.net/projects/vifm/files/vifm-w32/vifm-w32-se-0.7.7-binary.zip/download'
+$url64 = 'http://sourceforge.net/projects/vifm/files/vifm-w64/vifm-w64-se-0.7.7-binary.zip/download'
 
 try {
   $toolsFolder = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
@@ -12,7 +12,7 @@ try {
     throw "Expected to find one subfolder."
   }
   $subdir | % { 
-    robocopy /e /nfl /ndl /njh /njs /np $_.FullName $toolsFolder
+    robocopy /e /nfl /ndl /njh /njs /np $_.FullName $toolsFolder | Out-Null
     if($LASTEXITCODE -gt 4) {
         throw "Failed to copy files."
     }

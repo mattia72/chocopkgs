@@ -3,7 +3,7 @@
   <metadata>
     <id>vifm</id>
     <title>vifm file manager</title>
-    <version>0.7.6</version>
+    <version>0.7.7</version>
     <authors>Ken Steen</authors>
     <owners>Bart Joy</owners>
     <summary>Vifm is a ncurses based file manager with vi like keybindings.</summary>
