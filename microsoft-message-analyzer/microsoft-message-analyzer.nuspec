@@ -3,7 +3,7 @@
   <metadata>
     <id>microsoft-message-analyzer</id>
     <title>Microsoft Message Analyzer</title>
-    <version>1.0</version>
+    <version>1.1</version>
     <authors>Microsoft</authors>
     <owners>Bart Joy</owners>
     <summary>Message Analyzer enables you to capture, display, and analyze protocol messaging traffic; and to trace and assess system events and other messages from Windows components.</summary>
@@ -13,7 +13,7 @@ Message Analyzer enables you to display trace, log, and other message data in nu
 
 Please also visit Message Analyzer Team Blog (http://blogs.technet.com/MessageAnalyzer) for continued updates and helpful information.</description>
     <projectUrl>http://technet.microsoft.com/en-us/library/jj649776.aspx</projectUrl>
-    <tags>microsoft message analyzer wireshark network monitor packet trace sniff etw</tags>
+    <tags>microsoft message analyzer analyser wireshark network monitor packet trace sniff etw</tags>
     <copyright>© 2013 Microsoft Corporation. All rights reserved.</copyright>
     <licenseUrl>https://bitbucket.org/bartj/chocolateypackages/src/HEAD/microsoft-message-analyzer/Message%20Analyzer%20Use%20Terms.rtf</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

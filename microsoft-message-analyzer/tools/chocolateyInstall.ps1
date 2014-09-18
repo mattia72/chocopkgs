@@ -1,5 +1,4 @@
-﻿$packageName = 'vifm'
-$url32 = 'http://download.microsoft.com/download/F/4/4/F4461C3D-B378-473D-B15A-28BC0BD849E8/MessageAnalyzer.msi'
-$url64 = 'http://download.microsoft.com/download/F/4/4/F4461C3D-B378-473D-B15A-28BC0BD849E8/MessageAnalyzer64.msi'
+﻿$url32 = 'http://download.microsoft.com/download/2/8/3/283DE38A-5164-49DB-9883-9D1CC432174D/MessageAnalyzer.msi'
+$url64 = 'http://download.microsoft.com/download/2/8/3/283DE38A-5164-49DB-9883-9D1CC432174D/MessageAnalyzer64.msi'
 
 Install-ChocolateyPackage 'microsoft-message-analyzer' 'msi' '/quiet' $url32 $url64
