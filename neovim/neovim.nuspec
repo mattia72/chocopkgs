@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>neovim</id>
+        <title>neovim - nightly build</title>
+        <version>0.0.1</version>
+        <authors>Neovim contributors</authors>
+        <owners>Bart Joy</owners>
+        <summary>Vim-fork focused on extensibility and agility.</summary>
+        <description>More powerful plugins
+The msgpack API enables structured communication to and from any programming language. Remote plugins run as co-processes that communicate with Neovim safely and asynchronously.
+
+Better out-of-the-box
+Strong defaults
+Modern terminal features such as truecolor and bracketed paste
+Built-in terminal emulator
+First-class embedding
+GUIs (or TUIs—such as readline) can nvim --embed or communicate via TCP socket using the discoverable msgpack API.
+
+Drop-in replacement for Vim
+Neovim is an extension of Vim: feature-parity and backwards compatibility are high priorities. If you are already familiar with Vim, see :help nvim-from-vim to learn about the differences.</description>
+        <projectUrl>https://neovim.io/</projectUrl>
+        <tags>vim gvim neovim text editor</tags>
+        <copyright>Copyright Neovim contributors. All rights reserved.</copyright>
+        <licenseUrl>https://raw.githubusercontent.com/neovim/neovim/master/LICENSE</licenseUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <iconUrl>https://neovim.io/images/logo@2x.png</iconUrl>
+        <releaseNotes></releaseNotes>
+    </metadata>
+</package>
