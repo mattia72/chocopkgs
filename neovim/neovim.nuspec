@@ -20,7 +20,7 @@ GUIs (or TUIs—such as readline) can nvim --embed or communicate via TCP socket
 Drop-in replacement for Vim
 Neovim is an extension of Vim: feature-parity and backwards compatibility are high priorities. If you are already familiar with Vim, see :help nvim-from-vim to learn about the differences.</description>
         <projectUrl>https://neovim.io/</projectUrl>
-        <tags>vim gvim neovim text editor</tags>
+        <tags>vi vim gvim neovim text editor sublime atom emacs notepad</tags>
         <copyright>Copyright Neovim contributors. All rights reserved.</copyright>
         <licenseUrl>https://raw.githubusercontent.com/neovim/neovim/master/LICENSE</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
