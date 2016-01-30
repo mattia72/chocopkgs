@@ -4,10 +4,10 @@
 function GetAppVeyorBuildUrl() {
     function GetUrl($jobs, $jobName) {
         $jobId = ($jobs | ? name -eq $jobName).jobId
-        "https://ci.appveyor.com/api/buildjobs/$jobId/artifacts/Neovim.zip"
+        "https://ci.appveyor.com/api/buildjobs/$jobId/artifacts/build/Neovim.zip"
     }
 
-    $buildDetails = Invoke-RestMethod -Uri https://ci.appveyor.com/api/projects/equalsraf/neovim
+    $buildDetails = Invoke-RestMethod -Uri https://ci.appveyor.com/api/projects/equalsraf/neovim/branch/tb-mingw
     $jobs = $buildDetails.build.jobs
     GetUrl $jobs "Environment: GENERATOR=Visual Studio 14 Win64, DEPS_PATH=deps64"
 }
@@ -34,8 +34,8 @@ function DownloadAndExtractArchive($url, $destinationFileName) {
 }
 
 function MergeApplicationDirectories($neovimDirectory, $neovimQtDirectory) {
-    cp "$neovimDirectory\bin\nvim.exe" $neovimQtDirectory
-    cp -r "$neovimDirectory\share\nvim\runtime\*" $neovimQtDirectory
+    cp "$neovimDirectory\NeoVim\bin\nvim.exe" $neovimQtDirectory
+    cp -r "$neovimDirectory\NeoVim\share\nvim\runtime\*" $neovimQtDirectory
     mv $neovimQtDirectory\nvim-qt.exe $neovimQtDirectory\neovim.exe
 }
 
