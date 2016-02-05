@@ -26,5 +26,9 @@ Neovim is an extension of Vim: feature-parity and backwards compatibility are hi
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <iconUrl>https://neovim.io/images/logo@2x.png</iconUrl>
         <releaseNotes></releaseNotes>
+        <dependencies>
+            <dependency id="vcredist2013"/>
+            <dependency id="vcredist2015"/>
+        </dependencies>
     </metadata>
 </package>
