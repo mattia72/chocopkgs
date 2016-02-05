@@ -35,7 +35,7 @@ function DownloadAndExtractArchive($url, $destinationFileName) {
 }
 
 function MergeApplicationDirectories($neovimDirectory, $neovimQtDirectory) {
-    cp "$neovimDirectory\NeoVim\bin\nvim.exe" $neovimQtDirectory
+    cp "$neovimDirectory\NeoVim\bin\*" $neovimQtDirectory
     cp -r "$neovimDirectory\NeoVim\share\nvim\runtime\*" $neovimQtDirectory
     mv $neovimQtDirectory\nvim-qt.exe $neovimQtDirectory\neovim.exe
 }
