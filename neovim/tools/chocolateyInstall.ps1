@@ -17,6 +17,7 @@ function GetWorkingDirectory() {
     $tempDir = Join-Path $chocTempDir 'neovim'
     if($env:packageVersion -ne $null) { $tempDir = Join-Path $tempDir "$env:packageVersion" }
     [System.IO.Directory]::CreateDirectory($tempDir) | Out-Null
+    Write-Host "Working directory is $tempDir."
     $tempDir
 }
 
@@ -40,6 +41,7 @@ function MergeApplicationDirectories($neovimDirectory, $neovimQtDirectory) {
 }
 
 function MoveMergedApplicationToToolsDirectory($packageToolsDirectory, $mergedDirectory) {
+    Write-Host "Copying package from $mergedDirectory to $packageToolsDirectory..."
     cp -r $mergedDirectory $packageToolsDirectory
 }
 
