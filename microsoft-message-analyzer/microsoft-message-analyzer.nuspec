@@ -3,7 +3,7 @@
   <metadata>
     <id>microsoft-message-analyzer</id>
     <title>Microsoft Message Analyzer</title>
-    <version>1.3.1</version>
+    <version>1.4</version>
     <authors>Microsoft</authors>
     <owners>Bart Joy</owners>
     <summary>Message Analyzer enables you to capture, display, and analyze protocol messaging traffic; and to trace and assess system events and other messages from Windows components.</summary>
