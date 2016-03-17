@@ -13,7 +13,7 @@ Message Analyzer enables you to display trace, log, and other message data in nu
 
 Please also visit Message Analyzer Team Blog (http://blogs.technet.com/MessageAnalyzer) for continued updates and helpful information.</description>
     <projectUrl>http://technet.microsoft.com/en-us/library/jj649776.aspx</projectUrl>
-    <tags>microsoft message analyzer analyser wireshark network monitor packet trace sniff etw</tags>
+    <tags>admin microsoft message analyzer analyser wireshark network monitor packet trace sniff etw</tags>
     <copyright>© 2014 Microsoft Corporation. All rights reserved.</copyright>
     <licenseUrl>https://bitbucket.org/bartj/software_chocolateypackages/raw/HEAD/microsoft-message-analyzer/Message%20Analyzer%20Use%20Terms.rtf</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
