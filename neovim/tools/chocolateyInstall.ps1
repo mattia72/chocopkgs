@@ -8,7 +8,14 @@ function GetAppVeyorBuildUrl() {
     }
 
     $buildDetails = Invoke-RestMethod -Uri https://ci.appveyor.com/api/projects/equalsraf/neovim/branch/tb-mingw
-    $jobs = $buildDetails.build.jobs
+    $build = $buildDetails.build
+    $buildStatus = $build.status
+    if($buildStatus -ne 'success') {
+        throw "Unable to download neovim because the latest build is failing (current status = $buildStatus). " +
+        "Please see the build status page at https://ci.appveyor.com/project/equalsraf/neovim/branch/tb-mingw. " +
+        "Also consider creating a new issue for the neovim project at https://github.com/neovim/neovim/issues."
+    }
+    $jobs = $build.jobs
     GetUrl $jobs "Environment: GENERATOR=Visual Studio 14 Win64, DEPS_PATH=deps64"
 }
 
