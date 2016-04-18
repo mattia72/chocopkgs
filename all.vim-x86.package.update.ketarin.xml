@@ -4,8 +4,8 @@
     <WebsiteUrl />
     <UserAgent />
     <UserNotes />
-    <LastFileSize>229362</LastFileSize>
-    <LastFileDate>2015-12-28T12:00:08.096016</LastFileDate>
+    <LastFileSize>7147709</LastFileSize>
+    <LastFileDate>2016-04-14T19:04:14+02:00</LastFileDate>
     <IgnoreFileInformation>false</IgnoreFileInformation>
     <DownloadBeta>Default</DownloadBeta>
     <DownloadDate xsi:nil="true" />
@@ -26,8 +26,8 @@
         <value>
           <UrlVariable>
             <RegexRightToLeft>false</RegexRightToLeft>
-            <VariableType>StartEnd</VariableType>
-            <Regex />
+            <VariableType>RegularExpression</VariableType>
+            <Regex>&lt;b&gt;Vim version:&lt;/b&gt; (\d.\d.\d+)&lt;br /&gt;</Regex>
             <Url>https://tuxproject.de/projects/vim/</Url>
             <StartText>&lt;b&gt;Vim version:&lt;/b&gt; </StartText>
             <EndText>&lt;br /&gt;</EndText>
@@ -35,19 +35,36 @@
           </UrlVariable>
         </value>
       </item>
+      <item>
+        <key>
+          <string>packagefolder</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>C:\home\dev\chocopkgs</TextualContent>
+            <Name>packagefolder</Name>
+          </UrlVariable>
+        </value>
+      </item>
     </Variables>
     <ExecuteCommand />
-    <ExecutePreCommand />
+    <ExecutePreCommand>chocopkgup /p vim-x86.install /v {version} /pf "{packagefolder}" /disablepush
+chocopkgup /p vim-x86 /v {version} /pf "{packagefolder}" /disablepush
+chocopkgup /p vim-x86.portable /v {version} /pf "{packagefolder}" /disablepush</ExecutePreCommand>
     <ExecuteCommandType>Batch</ExecuteCommandType>
     <ExecutePreCommandType>Batch</ExecutePreCommandType>
     <Category />
     <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\home\dev\chocopkgs\ketarin-download\complete-x86.7z</PreviousLocation>
     <DeletePreviousFile>true</DeletePreviousFile>
     <Enabled>true</Enabled>
     <FileHippoId />
-    <LastUpdated>2015-12-28T12:00:08.096016</LastUpdated>
-    <TargetPath>%Temp%\</TargetPath>
-    <FixedDownloadUrl>http://www.bintray.com/assets/bintray-logo.png</FixedDownloadUrl>
-    <Name>vim-x86.portable</Name>
+    <LastUpdated>2016-04-18T19:59:01.9292376+02:00</LastUpdated>
+    <TargetPath>{packagefolder}\_download\</TargetPath>
+    <FixedDownloadUrl>http://tuxproject.de/projects/vim/complete-x86.7z</FixedDownloadUrl>
+    <Name>vim-x86</Name>
   </ApplicationJob>
 </Jobs>

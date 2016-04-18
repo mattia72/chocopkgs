@@ -4,7 +4,7 @@
   <metadata>
     <id>vim-x86</id>
     <title>Vim x86</title>
-    <version>7.4.1739</version>
+    <version>{{PackageVersion}}</version>
     <authors>Build: TuxProject.de, Developer: vim team</authors>
     <owners>mattia72</owners>
     <summary>32bit build of vim, compiled with all features enabled. 'Right click > edit with vim' support included. Vim and gVim launchers are placed on the PATH</summary>
@@ -29,7 +29,7 @@ His work was forked on [github](https://github.com/mattia72/chocopkgs) to make x
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/mattia72/chocopkgs/master/vim.png</iconUrl>
     <dependencies>
-      <dependency id="vim-x86.install" version="[7.4.1739]" />
+      <dependency id="vim-x86.install" version="[{{PackageVersion}}]" />
     </dependencies>
     <releaseNotes>
 ### 7.4.1739

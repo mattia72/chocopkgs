@@ -4,7 +4,7 @@
   <metadata>
     <id>vim-x86.portable</id>
     <title>Vim x86 (Portable)</title>
-    <version>7.4.1739</version>
+    <version>{{PackageVersion}}</version>
     <authors>Build: TuxProject.de, Developer: vim team</authors>
     <owners>mattia72</owners>
     <summary>32bit build of vim, compiled with all features enabled. This portable package does not generate the various .bat files (vimdiff.bat gvimdiff.bat view.bat and etc).</summary>
