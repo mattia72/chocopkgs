@@ -2,41 +2,41 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>vim-x86.portable</id>
-    <title>Vim x86 (Portable)</title>
+    <id>vim-x86</id>
+    <title>Vim x86</title>
     <version>7.4.1739</version>
     <authors>Build: TuxProject.de, Developer: vim team</authors>
     <owners>mattia72</owners>
-    <summary>32bit build of vim, compiled with all features enabled. This portable package does not generate the various .bat files (vimdiff.bat gvimdiff.bat view.bat and etc).</summary>
+    <summary>32bit build of vim, compiled with all features enabled. 'Right click > edit with vim' support included. Vim and gVim launchers are placed on the PATH</summary>
     <description>
 	    Used libraries: Perl 5.22.1, Python 2.7.11, Python 3.5.1, Racket 6.4.0.4, Ruby 2.2.3, Lua 5.3.2, Tcl 8.6.4, libXpm.
-      
+	    Build provided by TuxProject.de - consider donating to help support their server costs.
+
 ## Thanks
 
- * Build provided by [TuxProject.de](https://tuxproject.de/projects/vim/) - consider [donating](https://tuxproject.de/#spenden) to help support their server costs.
- * A [vim-x64](https://chocolatey.org/packages/vim-x64) package was developed first by 
+* Build provided by [TuxProject.de](https://tuxproject.de/projects/vim/) - consider [donating](https://tuxproject.de/#spenden) to help support their server costs.
+* A [vim-x64](https://chocolatey.org/packages/vim-x64) package was developed first by 
 [LinkSatonaka](https://chocolatey.org/profiles/LinkSatonaka "Link Satonaka"). 
 His work was forked on [github](https://github.com/mattia72/chocopkgs) to make x86 builds also available. 
     </description>
     <projectUrl>https://tuxproject.de/projects/vim/</projectUrl>
     <projectSourceUrl>https://github.com/vim/vim</projectSourceUrl>
-    <packageSourceUrl>https://github.com/mattia72/chocopkgs/tree/master/vim-x86.portable</packageSourceUrl>
+    <packageSourceUrl>https://github.com/mattia72/chocopkgs/tree/master/vim-x86</packageSourceUrl>
     <docsUrl>http://www.vim.org/docs.php</docsUrl>
     <mailingListUrl>http://www.vim.org/maillist.php</mailingListUrl>
-    <tags>vim-x86 vim editor tux</tags>
+    <tags>vim-x86 vim editor tux admin</tags>
     <licenseUrl>http://vimdoc.sourceforge.net/htmldoc/uganda.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/mattia72/chocopkgs/master/vim.png</iconUrl>
-    <!--<dependencies>
-      <dependency id="" version="__VERSION__" />
-      <dependency id="" />
-    </dependencies>-->
+    <dependencies>
+      <dependency id="vim-x86.install" version="[7.4.1739]" />
+    </dependencies>
     <releaseNotes>
 ### 7.4.1739
 
  * First version of the forked [vim-x64](https://chocolatey.org/packages/vim-x64) package.
     </releaseNotes>
-    <provides>vim vim-x86</provides>
+    <provides>vim</provides>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
