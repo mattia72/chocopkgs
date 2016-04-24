@@ -9,22 +9,22 @@
     <owners>mattia72</owners>
     <summary>32bit build of vim, compiled with all features enabled. 'Right click > edit with vim' support included. Vim and gVim launchers are placed on the PATH</summary>
     <description>
-	    Used libraries: Perl 5.22.1, Python 2.7.11, Python 3.5.1, Racket 6.4.0.4, Ruby 2.2.3, Lua 5.3.2, Tcl 8.6.4, libXpm.
-	    Build provided by TuxProject.de - consider donating to help support their server costs.
+	    Used libraries: Perl 5.22.1, Python 2.7.11, Python 3.5.1, Racket 6.4.0.4, Ruby 2.2.3, [Lua 5.3.2](https://chocolatey.org/packages/lua53), Tcl 8.6.4, libXpm.
+      
+      You'll need to have the appropriate DLL files in your Vim directory or somewhere in your %PATH% to make them work. They're not included, but can easily installed with chocolatey (see eg. [Lua 5.3.2](https://chocolatey.org/packages/lua53) ).
+      The list of compiled features is available [here](https://tuxproject.de/projects/vim/_versioninfo.php). 
 
 ## Thanks
 
-* Build provided by [TuxProject.de](https://tuxproject.de/projects/vim/) - consider [donating](https://tuxproject.de/#spenden) to help support their server costs.
-* A [vim-x64](https://chocolatey.org/packages/vim-x64) package was developed first by 
-[LinkSatonaka](https://chocolatey.org/profiles/LinkSatonaka "Link Satonaka"). 
-His work was forked on [github](https://github.com/mattia72/chocopkgs) to make x86 builds also available. 
+ * Build provided by [TuxProject.de](https://tuxproject.de/projects/vim/) - consider [donating](https://tuxproject.de/#spenden) to help support their server costs.
+ * A [vim-x64](https://chocolatey.org/packages/vim-x64) package was developed first by [LinkSatonaka](https://chocolatey.org/profiles/LinkSatonaka "Link Satonaka"). His work was forked on [github](https://github.com/mattia72/chocopkgs) to make x86 builds also available. 
     </description>
     <projectUrl>https://tuxproject.de/projects/vim/</projectUrl>
     <projectSourceUrl>https://github.com/vim/vim</projectSourceUrl>
     <packageSourceUrl>https://github.com/mattia72/chocopkgs/tree/master/vim-x86.install</packageSourceUrl>
     <docsUrl>http://www.vim.org/docs.php</docsUrl>
     <mailingListUrl>http://www.vim.org/maillist.php</mailingListUrl>
-    <tags>vim-x86 vim editor tux admin</tags>
+    <tags>vim-x86 vim editor tux</tags>
     <licenseUrl>http://vimdoc.sourceforge.net/htmldoc/uganda.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/mattia72/chocopkgs/master/vim.png</iconUrl>

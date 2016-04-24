@@ -9,14 +9,15 @@
     <owners>mattia72</owners>
     <summary>32bit build of vim, compiled with all features enabled. This portable package does not generate the various .bat files (vimdiff.bat gvimdiff.bat view.bat and etc).</summary>
     <description>
-	    Used libraries: Perl 5.22.1, Python 2.7.11, Python 3.5.1, Racket 6.4.0.4, Ruby 2.2.3, Lua 5.3.2, Tcl 8.6.4, libXpm.
+	    Used libraries: Perl 5.22.1, Python 2.7.11, Python 3.5.1, Racket 6.4.0.4, Ruby 2.2.3, [Lua 5.3.2](https://chocolatey.org/packages/lua53), Tcl 8.6.4, libXpm.
       
+      You'll need to have the appropriate DLL files in your Vim directory or somewhere in your %PATH% to make them work. They're not included, but can easily installed with chocolatey (see eg. [Lua 5.3.2](https://chocolatey.org/packages/lua53) ).
+      The list of compiled features is available [here](https://tuxproject.de/projects/vim/_versioninfo.php). 
+
 ## Thanks
 
  * Build provided by [TuxProject.de](https://tuxproject.de/projects/vim/) - consider [donating](https://tuxproject.de/#spenden) to help support their server costs.
- * A [vim-x64](https://chocolatey.org/packages/vim-x64) package was developed first by 
-[LinkSatonaka](https://chocolatey.org/profiles/LinkSatonaka "Link Satonaka"). 
-His work was forked on [github](https://github.com/mattia72/chocopkgs) to make x86 builds also available. 
+ * A [vim-x64](https://chocolatey.org/packages/vim-x64) package was developed first by [LinkSatonaka](https://chocolatey.org/profiles/LinkSatonaka "Link Satonaka"). His work was forked on [github](https://github.com/mattia72/chocopkgs) to make x86 builds also available. 
     </description>
     <projectUrl>https://tuxproject.de/projects/vim/</projectUrl>
     <projectSourceUrl>https://github.com/vim/vim</projectSourceUrl>
