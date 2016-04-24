@@ -11,17 +11,24 @@
     <iconUrl>https://cdn.rawgit.com/mattia72/chocopkgs/master/freecommander.png</iconUrl>
     <copyright>2004-2016 Marek Jasinski</copyright> 
     <licenseUrl>http://freecommander.com/en/license/</licenseUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>http://www.freecommander.com/fchelpxe/en/FreeCommander.html</docsUrl>
     <mailingListUrl>http://forum.freecommander.com/</mailingListUrl>
     <bugTrackerUrl>http://forum.freecommander.com/viewforum.php?f=19</bugTrackerUrl>
     <tags>freecommander freecommander-xe admin dual panel file manger commander</tags>
     <summary>FreeCommander is an easy-to-use alternative to the standard windows file manager.</summary>
-    <description>The program helps you with daily work in Windows. Here you can find all the necessary functions to manage your data stock. You can take FreeCommander anywhere – just copy the installation directory on a CD or USB-Stick – and you can evenwork with this program on a foreign computer.
+    <description>
+      FreeCommander is an easy-to-use alternative to the standard windows file manager.
+      The program helps you with daily work in Windows. 
+      Here you can find all the necessary functions to manage your data stock. 
+      You can take FreeCommander anywhere – just copy the portable directory on a CD or USB-Stick – and you can even
+      work with this program on a foreign computer.
 
-    **Please Note**: This is an automatically updated package. If you find it is 
-    out of date by more than a day or two, please contact the maintainer(s) and
-    let them know the package is no longer updating correctly.
+      A summary about the main features in FreeCommander is available: [here](http://freecommander.com/en/summary/).
+
+      **Please Note**: This is an automatically updated package. If you find it is 
+      out of date by more than a week, please contact the maintainer(s) and
+      let them know the package is no longer updating correctly.
     </description>
     <dependencies>
       <dependency id="freecommande-xe.install" version="[{{PackageVersion}}]" />
