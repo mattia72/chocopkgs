@@ -16,26 +16,21 @@ $ErrorActionPreference = 'Stop'; # stop on all errors
 
 $packageName= 'freecommander-xe.install' # arbitrary name for the package, used in messages
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = '{{DownloadUrl}}' # download url
-$url64      = '{{DownloadUrlx64}}' # 64bit URL here or remove - if installer is both, use $url
-#$fileLocation = Join-Path $toolsDir 'NAME_OF_EMBEDDED_INSTALLER_FILE'
-#$fileLocation = '\\SHARE_LOCATION\to\INSTALLER_FILE'
+$url        = 'http://freecommander.com/downloads/FreeCommanderXE-32-public_setup.zip' # download url
 
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
-  fileType      = 'EXE_MSI_OR_MSU' #only one of these: exe, msi, msu
+  fileType      = 'EXE' #only one of these: exe, msi, msu
   url           = $url
-  url64bit      = $url64
+  url64bit      = $url
   #file         = $fileLocation
 
-  #MSI
-  silentArgs    = "/qn /norestart /l*v `"$env:TEMP\chocolatey\$($packageName)\$($packageName).MsiInstall.log`"" # ALLUSERS=1 DISABLEDESKTOPSHORTCUT=1 ADDDESKTOPICON=0 ADDSTARTMENU=0
   validExitCodes= @(0, 3010, 1641)
   #OTHERS
   # Uncomment matching EXE type (sorted by most to least common)
   #silentArgs   = '/S'           # NSIS
-  #silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' # Inno Setup
+  silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' # Inno Setup
   #silentArgs   = '/s'           # InstallShield
   #silentArgs   = '/s /v"/qn"' # InstallShield with MSI
   #silentArgs   = '/s'           # Wise InstallMaster
