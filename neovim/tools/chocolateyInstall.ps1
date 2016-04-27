@@ -7,6 +7,10 @@ function GetAppVeyorBuildUrl() {
         "https://ci.appveyor.com/api/buildjobs/$jobId/artifacts/build/Neovim.zip"
     }
 
+    if ( $PSVersionTable.PSVersion.Major < 3 ) {
+        throw "To install this package the Powershell version should be upgraded to 3.0. Now you have $($PSVersionTable.PSVersion) installed." 
+    }
+
     $buildDetails = Invoke-RestMethod -Uri https://ci.appveyor.com/api/projects/equalsraf/neovim/branch/tb-mingw
     $build = $buildDetails.build
     $buildStatus = $build.status

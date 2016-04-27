@@ -3,7 +3,8 @@
     <metadata>
         <id>neovim</id>
         <title>neovim - nightly build</title>
-        <version>0.0.3</version>
+        <version>{{PackageVersion}}</version>
+        <!--<version>0.0.3</version>-->
         <authors>Neovim contributors</authors>
         <owners>Bart Joy</owners>
         <summary>Vim-fork focused on extensibility and agility.</summary>
