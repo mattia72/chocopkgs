@@ -1,0 +1,398 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<Jobs>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="4308b2d8-b09e-4ef8-95e8-f9abfea39e6d">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>6452360</LastFileSize>
+    <LastFileDate>2016-04-26T20:10:29.4367085</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <Url />
+            <TextualContent>{full_version:replace: Build :.}</TextualContent>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>full_version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>FreeCommander XE (\d{4} Build \d+)</Regex>
+            <Url>http://freecommander.com/en/downloads/</Url>
+            <Name>full_version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>packagefolder</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>C:\home\dev\chocopkgs</TextualContent>
+            <Name>packagefolder</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand>chocopkgup /p freecommander-xe.install /v {version} /pf "{packagefolder}" 
+chocopkgup /p freecommander-xe /v {version} /pf "{packagefolder}"
+chocopkgup /p freecommander-xe.portable /v {version} /pf "{packagefolder}"  </ExecutePreCommand>
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\home\dev\chocopkgs\_download\FreeCommanderXE-32-public_setup.zip</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2016-04-26T20:10:29.4367085</LastUpdated>
+    <TargetPath>{packagefolder}\_download\</TargetPath>
+    <FixedDownloadUrl>http://freecommander.com/downloads/FreeCommanderXE-32-public_setup.zip</FixedDownloadUrl>
+    <Name>FreeCommander</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="4ed8250b-7296-432c-8748-5d03eda042b8">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>8037159</LastFileSize>
+    <LastFileDate>2016-04-27T16:47:23.9194949</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <Url />
+            <TextualContent>{full_version:regexreplace: Build.*:}.{build_beta_portable}</TextualContent>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>full_version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>FreeCommander XE (\d{4} Build \d+) </Regex>
+            <Url>http://freecommander.com/en/downloads/</Url>
+            <Name>full_version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>packagefolder</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>C:\home\dev\chocopkgs</TextualContent>
+            <Name>packagefolder</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>buildnum</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <Url>http://freecommander.com/en/downloads/</Url>
+            <TextualContent>{full_version:regexreplace:.* Build :}</TextualContent>
+            <Name>buildnum</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>build_beta_portable</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>_beta_portable(\d+)\.zip</Regex>
+            <Url>http://freecommander.com/en/downloads/</Url>
+            <Name>build_beta_portable</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>build_beta_setup</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>_beta_setup(\d+)\.zip</Regex>
+            <Url>http://freecommander.com/en/downloads/</Url>
+            <Name>build_beta_setup</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand>chocopkgup /p freecommander-xe.beta.portable /v {version} /pf "{packagefolder}"  /u {preupdate-url}  
+REM /disablepush</ExecutePreCommand>
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\home\dev\chocopkgs\_download\FreeCommanderXE-32-public_beta_portable716.zip</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2016-04-27T16:47:23.9194949</LastUpdated>
+    <TargetPath>{packagefolder}\_download\</TargetPath>
+    <FixedDownloadUrl>http://freecommander.com/downloads/FreeCommanderXE-32-public_beta_portable{build_beta_portable}.zip</FixedDownloadUrl>
+    <Name>FreeCommander.beta.portable</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="f76d0fe4-3985-42c5-a403-9ca411a10a69">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>6575295</LastFileSize>
+    <LastFileDate>2016-04-27T19:52:18.5725899</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <Url />
+            <TextualContent>{full_version:regexreplace: Build.*:}.{build_beta_portable}</TextualContent>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>full_version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>FreeCommander XE (\d{4} Build \d+) </Regex>
+            <Url>http://freecommander.com/en/downloads/</Url>
+            <Name>full_version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>packagefolder</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>C:\home\dev\chocopkgs</TextualContent>
+            <Name>packagefolder</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>buildnum</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <Url>http://freecommander.com/en/downloads/</Url>
+            <TextualContent>{full_version:regexreplace:.* Build :}</TextualContent>
+            <Name>buildnum</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>build_beta_portable</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>_beta_portable(\d+)\.zip</Regex>
+            <Url>http://freecommander.com/en/downloads/</Url>
+            <Name>build_beta_portable</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>build_beta_setup</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>_beta_setup(\d+)\.zip</Regex>
+            <Url>http://freecommander.com/en/downloads/</Url>
+            <Name>build_beta_setup</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand>chocopkgup /p freecommander-xe.beta.install /v {version} /pf "{packagefolder}"  /u {preupdate-url} 
+REM  /disablepush
+chocopkgup /p freecommander-xe.beta /v {version} /pf "{packagefolder}" /u {preupdate-url}  
+REM /disablepush</ExecutePreCommand>
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\home\dev\chocopkgs\_download\FreeCommanderXE-32-public_beta_setup716.zip</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2016-04-27T19:52:18.5725899</LastUpdated>
+    <TargetPath>{packagefolder}\_download\</TargetPath>
+    <FixedDownloadUrl>http://freecommander.com/downloads/FreeCommanderXE-32-public_beta_setup{build_beta_setup}.zip</FixedDownloadUrl>
+    <Name>FreeCommander.beta.setup</Name>
+  </ApplicationJob>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="b61a6b8d-b593-4ccf-a4a3-01a59a5a0f4c">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>118784</LastFileSize>
+    <LastFileDate>2016-04-24T22:15:51.1852937</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator>version</VariableChangeIndicator>
+    <HashVariable />
+    <HashType>None</HashType>
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>&lt;b&gt;Vim version:&lt;/b&gt; (\d.\d.\d+)&lt;br /&gt;</Regex>
+            <Url>https://tuxproject.de/projects/vim/</Url>
+            <StartText>&lt;b&gt;Vim version:&lt;/b&gt; </StartText>
+            <EndText>&lt;br /&gt;</EndText>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>packagefolder</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>C:\home\dev\chocopkgs</TextualContent>
+            <Name>packagefolder</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand>chocopkgup /p vim-x86.install /v {version} /pf "{packagefolder}" 
+
+chocopkgup /p vim-x86 /v {version} /pf "{packagefolder}" 
+
+chocopkgup /p vim-x86.portable /v {version} /pf "{packagefolder}" </ExecutePreCommand>
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\home\dev\chocopkgs\_download\complete-x86.7z</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2016-04-24T22:15:51.1852937</LastUpdated>
+    <TargetPath>{packagefolder}\_download\</TargetPath>
+    <FixedDownloadUrl>http://tuxproject.de/projects/vim/complete-x86.7z</FixedDownloadUrl>
+    <Name>vim-x86</Name>
+  </ApplicationJob>
+</Jobs>

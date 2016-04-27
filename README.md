@@ -7,4 +7,5 @@ For more information see: https://chocolatey.org
 
 ## Create package
 
-  choco new -a --template
+Create automatic update package template:
+    choco new -a 

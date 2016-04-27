@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>freecommander-xe.portable</id>
+    <id>freecommander-xe.beta.install</id>
     <version>{{PackageVersion}}</version>
     <packageSourceUrl>https://github.com/mattia72/chocopkgs</packageSourceUrl>
     <owners>mattia72</owners>
-    <title>FreeCommander XE (Portable)</title>
+    <title>FreeCommander XE beta (Install)</title>
     <authors>Marek Jasinski</authors>
     <projectUrl>http://freecommander.com/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/mattia72/chocopkgs/master/freecommander.png</iconUrl>
@@ -15,7 +15,7 @@
     <docsUrl>http://www.freecommander.com/fchelpxe/en/FreeCommander.html</docsUrl>
     <mailingListUrl>http://forum.freecommander.com/</mailingListUrl>
     <bugTrackerUrl>http://forum.freecommander.com/viewforum.php?f=19</bugTrackerUrl>
-    <tags>freecommander freecommander-xe admin dual panel file manger commander</tags>
+    <tags>freecommander freecommander-xe.beta admin dual panel file manger commander</tags>
     <summary>FreeCommander is an easy-to-use alternative to the standard windows file manager.</summary>
     <description>
       FreeCommander is an easy-to-use alternative to the standard windows file manager.

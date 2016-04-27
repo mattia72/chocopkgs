@@ -1,8 +1,11 @@
-﻿
-$ErrorActionPreference = 'Stop'; # stop on all errors
+﻿$ErrorActionPreference = 'Stop'; # stop on all errors
 
-$packageName = 'freecommander-xe.portable'
-$softwareName = 'FreeCommander XE*' #part or all of the Display Name as you see it in Programs and Features. It should be enough to be unique
+$packageName = 'freecommander-xe.beta.install'
+$softwareName = 'FreeCommander XE*' 
+$installerType = 'EXE' 
+
+$silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' # Inno Setup
+$validExitCodes = @(0)
 
 $uninstalled = $false
 $local_key     = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*'
@@ -17,7 +20,11 @@ if ($key.Count -eq 1) {
   $key | % { 
     $file = "$($_.UninstallString)"
 
-    Uninstall-ChocolateyZipPackage $packageName
+    Uninstall-ChocolateyPackage -PackageName $packageName `
+                                -FileType $installerType `
+                                -SilentArgs "$silentArgs" `
+                                -ValidExitCodes $validExitCodes `
+                                -File "$file"
   }
 } elseif ($key.Count -eq 0) {
   Write-Warning "$packageName has already been uninstalled by other means."
@@ -27,5 +34,4 @@ if ($key.Count -eq 1) {
   Write-Warning "Please alert package maintainer the following keys were matched:"
   $key | % {Write-Warning "- $_.DisplayName"}
 }
-
 

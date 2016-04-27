@@ -3,9 +3,9 @@
   <metadata>
     <id>freecommander-xe</id>
     <version>{{PackageVersion}}</version>
-    <packageSourceUrl>https://github.com/mattia72/chocopkgs/freecommander-xe.install</packageSourceUrl>
+    <packageSourceUrl>https://github.com/mattia72/chocopkgs</packageSourceUrl>
     <owners>mattia72</owners>
-    <title>freecommander-xe</title>
+    <title>FreeCommander XE</title>
     <authors>Marek Jasinski</authors>
     <projectUrl>http://freecommander.com/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/mattia72/chocopkgs/master/freecommander.png</iconUrl>
@@ -31,7 +31,7 @@
       let them know the package is no longer updating correctly.
     </description>
     <dependencies>
-      <dependency id="freecommande-xe.install" version="[{{PackageVersion}}]" />
+      <dependency id="freecommander-xe.install" version="[{{PackageVersion}}]" />
     </dependencies>
   </metadata>
   <files>

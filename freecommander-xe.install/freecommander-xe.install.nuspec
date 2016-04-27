@@ -3,9 +3,9 @@
   <metadata>
     <id>freecommander-xe.install</id>
     <version>{{PackageVersion}}</version>
-    <packageSourceUrl>https://github.com/mattia72/chocopkgs/freecommander-xe.install</packageSourceUrl>
+    <packageSourceUrl>https://github.com/mattia72/chocopkgs</packageSourceUrl>
     <owners>mattia72</owners>
-    <title>freecommander-xe.install (Install)</title>
+    <title>FreeCommander XE (Install)</title>
     <authors>Marek Jasinski</authors>
     <projectUrl>http://freecommander.com/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/mattia72/chocopkgs/master/freecommander.png</iconUrl>
