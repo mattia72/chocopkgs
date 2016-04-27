@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>microsoft-message-analyzer</id>
+    <title>Microsoft Message Analyzer</title>
+    <version>1.4.1</version>
+    <authors>Microsoft</authors>
+    <owners>Bart Joy</owners>
+    <summary>Message Analyzer enables you to capture, display, and analyze protocol messaging traffic; and to trace and assess system events and other messages from Windows components.</summary>
+    <description>Microsoft Message Analyzer is a new tool for capturing, displaying, and analyzing protocol messaging traffic and other system messages. Message Analyzer also enables you to import, aggregate, and analyze data from log and trace files. It is the successor to Microsoft Network Monitor 3.4 and a key component in the Protocol Engineering Framework (PEF) that was created by Microsoft for the improvement of protocol design, development, documentation, testing, and support. With Message Analyzer, you can choose to capture data live or load archived message collections from multiple data sources simultaneously. 
+
+Message Analyzer enables you to display trace, log, and other message data in numerous data viewer formats, including a default tree grid view and other selectable graphical views that employ grids, charts, and timeline visualizer components which provide high-level data summaries and other statistics. It also enables you to configure your own custom data viewers. In addition, Message Analyzer is not only an effective tool for troubleshooting network issues, but for testing and verifying protocol implementations as well. 
+
+Please also visit Message Analyzer Team Blog (http://blogs.technet.com/MessageAnalyzer) for continued updates and helpful information.</description>
+    <projectUrl>http://technet.microsoft.com/en-us/library/jj649776.aspx</projectUrl>
+    <tags>admin microsoft message analyzer analyser wireshark network monitor packet trace sniff etw</tags>
+    <copyright>© 2014 Microsoft Corporation. All rights reserved.</copyright>
+    <packageSourceUrl>https://bitbucket.org/bartj/software_chocolateypackages</packageSourceUrl>
+    <licenseUrl>https://bitbucket.org/bartj/software_chocolateypackages/raw/HEAD/microsoft-message-analyzer/Message%20Analyzer%20Use%20Terms.rtf</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://i.technet.microsoft.com/dynimg/IC677823.png</iconUrl>
+    <releaseNotes></releaseNotes>
+  </metadata>
+</package>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>vifm</id>
+    <title>vifm file manager</title>
+    <version>0.7.7</version>
+    <authors>Ken Steen</authors>
+    <owners>Bart Joy</owners>
+    <summary>Vifm is a ncurses based file manager with vi like keybindings.</summary>
+    <description>Vifm is a ncurses based file manager with vi like keybindings, which also borrows some useful ideas from mutt. If you use vi, vifm gives you complete keyboard control over your files without having to learn a new set of commands.</description>
+    <projectUrl>http://vifm.sourceforge.net/</projectUrl>
+    <tags>vifm vi vim mc midnight commander file manager</tags>
+    <copyright></copyright>
+    <licenseUrl>http://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://c.fsdn.com/allura/p/vifm/icon</iconUrl>
+    <releaseNotes></releaseNotes>
+  </metadata>
+</package>
