@@ -1,9 +1,10 @@
-﻿$ErrorActionPreference = 'Stop'; # stop on all errors
+﻿$ErrorActionPreference = 'Stop'; 
 
 $packageName= 'freecommander-xe.install' # arbitrary name for the package, used in messages
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://freecommander.com/downloads/FreeCommanderXE-32-public_setup.zip' # download url
-$zipFileName= 'FreeCommanderXE-32-public_setup.zip'
+$url        = '{{DownloadUrl}}' 
+$zipFileName= $url -replace ".*/", ""
+# name of the executable within the zip
 $exeFileName= 'FreeCommanderXE-32-public_setup.exe'
 
 

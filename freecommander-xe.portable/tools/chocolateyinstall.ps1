@@ -2,7 +2,7 @@
 
 $packageName= 'freecommander-xe.portable'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://freecommander.com/downloads/FreeCommanderXE-32-public_portable.zip' 
+$url        = '{{DownloadUrl}}' 
 $exeNotToIgnore='FreeCommander.exe'
 
 function IgnoreToolsExecutables() {
@@ -26,6 +26,6 @@ $packageArgs = @{
 }
 
 Install-ChocolateyZipPackage @packageArgs
-Push-Location "$PSScriptRoot\$packageName"
+Push-Location "$toolsDir"
 IgnoreToolsExecutables 
 Pop-Location
