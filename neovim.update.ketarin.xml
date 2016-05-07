@@ -1,0 +1,211 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<Jobs>
+  <ApplicationJob xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="4d06e6df-f3c7-47d4-816c-b556070759cf">
+    <WebsiteUrl />
+    <UserAgent />
+    <UserNotes />
+    <LastFileSize>6775385</LastFileSize>
+    <LastFileDate>2016-05-06T07:07:56.7831671</LastFileDate>
+    <IgnoreFileInformation>false</IgnoreFileInformation>
+    <DownloadBeta>Default</DownloadBeta>
+    <DownloadDate xsi:nil="true" />
+    <CheckForUpdatesOnly>false</CheckForUpdatesOnly>
+    <VariableChangeIndicator />
+    <HashVariable />
+    <HashType>None</HashType>
+    <CanBeShared>true</CanBeShared>
+    <ShareApplication>false</ShareApplication>
+    <ExclusiveDownload>false</ExclusiveDownload>
+    <HttpReferer />
+    <SetupInstructions />
+    <Variables>
+      <item>
+        <key>
+          <string>msvc64_jobid</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>{"jobID":"([a-z0-9]+)"[^}]*TARGET=MSVC_64</Regex>
+            <Url>https://ci.appveyor.com/api/projects/equalsraf/neovim/branch/tb-mingw</Url>
+            <Name>msvc64_jobid</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>mingw32_jobid</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>{"jobID":"([a-z0-9]+)"[^}]*TARGET=MINGW_32</Regex>
+            <Url>https://ci.appveyor.com/api/projects/equalsraf/neovim/branch/tb-mingw</Url>
+            <Name>mingw32_jobid</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>version</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>"version":"([0-9]+)"</Regex>
+            <Url>https://ci.appveyor.com/api/projects/equalsraf/neovim/branch/tb-mingw</Url>
+            <Name>version</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>mingw32_status</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>{"jobID":"[a-z0-9]+"[^}]*TARGET=MINGW_32[^}]*"status":"([a-z]+)"</Regex>
+            <Url>https://ci.appveyor.com/api/projects/equalsraf/neovim/branch/tb-mingw</Url>
+            <Name>mingw32_status</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>msvc64_status</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>{"jobID":"[a-z0-9]+"[^}]*TARGET=MSVC_64[^}]*"status":"([a-z]+)"</Regex>
+            <Url>https://ci.appveyor.com/api/projects/equalsraf/neovim/branch/tb-mingw</Url>
+            <Name>msvc64_status</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>buildNumber</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>"buildNumber":([0-9]+)</Regex>
+            <Url>https://ci.appveyor.com/api/projects/equalsraf/neovim/branch/tb-mingw</Url>
+            <Name>buildNumber</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>packagefolder</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>C:\home\dev\chocopkgs</TextualContent>
+            <Name>packagefolder</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>date</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>{msvc64_updated:replace:-:.}</TextualContent>
+            <Name>date</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>msvc64_updated</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>{"jobID":"[a-z0-9]+"[^}]*TARGET=MSVC_64[^}]*"updated":"([0-9]{4}-[0-9]{2}-[0-9]{2}).*"</Regex>
+            <Url>https://ci.appveyor.com/api/projects/equalsraf/neovim/branch/tb-mingw</Url>
+            <Name>msvc64_updated</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>mingw32_updated</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>RegularExpression</VariableType>
+            <Regex>{"jobID":"[a-z0-9]+"[^}]*TARGET=MINGW_32[^}]*"updated":"([0-9]{4}-[0-9]{2}-[0-9]{2}).*"</Regex>
+            <Url>https://ci.appveyor.com/api/projects/equalsraf/neovim/branch/tb-mingw</Url>
+            <Name>mingw32_updated</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url_begin</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>https://ci.appveyor.com/api/buildjobs/</TextualContent>
+            <Name>url_begin</Name>
+          </UrlVariable>
+        </value>
+      </item>
+      <item>
+        <key>
+          <string>url_end</string>
+        </key>
+        <value>
+          <UrlVariable>
+            <RegexRightToLeft>false</RegexRightToLeft>
+            <VariableType>Textual</VariableType>
+            <Regex />
+            <TextualContent>/artifacts/build/Neovim.zip</TextualContent>
+            <Name>url_end</Name>
+          </UrlVariable>
+        </value>
+      </item>
+    </Variables>
+    <ExecuteCommand />
+    <ExecutePreCommand>IF "{mingw32_status}"=="success" IF "{msvc64_status}"=="success" (
+    chocopkgup /p neovim /v "{date}.{version}" /pf "{packagefolder}"  /url {url_begin}{mingw32_jobid}{url_end} /u64 {url_begin}{msvc64_jobid}{url_end} /disablepush /force
+) ELSE (
+    echo "Failed builds found on appveyor, no update necessary."
+)
+</ExecutePreCommand>
+    <ExecuteCommandType>Batch</ExecuteCommandType>
+    <ExecutePreCommandType>Batch</ExecutePreCommandType>
+    <Category />
+    <SourceType>FixedUrl</SourceType>
+    <PreviousLocation>C:\home\dev\chocopkgs\_download\Neovim.zip</PreviousLocation>
+    <DeletePreviousFile>true</DeletePreviousFile>
+    <Enabled>true</Enabled>
+    <FileHippoId />
+    <LastUpdated>2016-05-06T07:07:56.7831671</LastUpdated>
+    <TargetPath>{packagefolder}\_download\</TargetPath>
+    <FixedDownloadUrl>https://ci.appveyor.com/api/buildjobs/{msvc64_jobid}/artifacts/build/Neovim.zip</FixedDownloadUrl>
+    <Name>Neovim</Name>
+  </ApplicationJob>
+</Jobs>
