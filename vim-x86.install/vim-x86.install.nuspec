@@ -30,11 +30,9 @@ Over discussion on gitter, we have determined this package should be moved to vi
     <tags>vim-x86 vim editor tux</tags>
     <licenseUrl>http://vimdoc.sourceforge.net/htmldoc/uganda.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/mattia72/chocopkgs/master/vim.png</iconUrl>
-    <!--<dependencies>
-      <dependency id="" version="__VERSION__" />
-      <dependency id="" />
-    </dependencies>-->
+    <dependencies>
+      <dependency id="vim-tux.install"/>
+    </dependencies>
     <releaseNotes>
 ### 7.4.1739
 

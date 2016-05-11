@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vim-x86.portable</id>
-    <title>Vim x86 (Portable)</title>
+    <title>[Deprecated] Vim x86 (Portable)</title>
     <version>{{PackageVersion}}</version>
     <authors>Build: TuxProject.de, Developer: vim team</authors>
     <owners>mattia72</owners>
@@ -27,11 +27,9 @@
     <tags>vim-x86 vim editor tux</tags>
     <licenseUrl>http://vimdoc.sourceforge.net/htmldoc/uganda.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/mattia72/chocopkgs/master/vim.png</iconUrl>
-    <!--<dependencies>
-      <dependency id="" version="__VERSION__" />
-      <dependency id="" />
-    </dependencies>-->
+    <dependencies>
+      <dependency id="vim-tux.portable"/>
+    </dependencies>
     <releaseNotes>
 ### 7.4.1739
 

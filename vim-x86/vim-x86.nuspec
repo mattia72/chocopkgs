@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vim-x86</id>
-    <title>Vim x86</title>
+    <title>[Deprecated] Vim x86</title>
     <version>{{PackageVersion}}</version>
     <authors>Build: TuxProject.de, Developer: vim team</authors>
     <owners>mattia72</owners>
@@ -27,9 +27,8 @@
     <tags>vim-x86 vim editor tux admin</tags>
     <licenseUrl>http://vimdoc.sourceforge.net/htmldoc/uganda.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/mattia72/chocopkgs/master/vim.png</iconUrl>
     <dependencies>
-      <dependency id="vim-x86.install" version="[{{PackageVersion}}]" />
+      <dependency id="vim-tux"/>
     </dependencies>
     <releaseNotes>
 ### 7.4.1739
